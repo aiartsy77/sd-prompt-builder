@@ -11,10 +11,10 @@ weight: (prompt:weight)
 
 
 TODO
-- call variable in text with ^
 - variable prepend and append
-- "todo: this would be nice" in parsePrompt.test.js (improve commas detection for splitting)
+- validation: variable key must be only letters and numbers, no spaces or special characters
 - randomPicker {a|b} where options can be active or not (nested dynamic input)
+- "todo: this would be nice" in parsePrompt.test.js (improve commas detection for splitting)
 - phrase radio picker
 - tooltip for phraseType in SectionPhrasesInput (eg, T is text, V is variable, etc.)
 - phraseType support for embeddings
@@ -27,6 +27,7 @@ TODO
 - migrate to Nuxt
 IN PROGRESS
 DONE
+- call variable in text with ^
 - deploy to github pages
 - github repo
 - store config in localstorage

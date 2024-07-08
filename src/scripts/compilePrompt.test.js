@@ -58,3 +58,23 @@ describe("compilePrompt", () => {
     );
   });
 });
+
+describe("compilePrompt with variables", () => {
+  test("should insert variable into string", () => {
+    const compile = compilePrompt([{ key: "color", value: "blue" }]);
+    const emptyState = { phrases: phrasesFor(["one ^color three"]) };
+    expect(compile(emptyState)).toBe("one blue three");
+  });
+
+  test("should insert variable if its just one", () => {
+    const compile = compilePrompt([{ key: "color", value: "blue" }]);
+    const emptyState = { phrases: phrasesFor(["one", "^color", "three"]) };
+    expect(compile(emptyState)).toBe("one, blue, three");
+  });
+
+  test("should insert variable for all stop characters", () => {
+    const compile = compilePrompt([{ key: "c", value: "P" }]);
+    const emptyState = { phrases: phrasesFor(["^c,^c.^c;^c:^c[^c]^c(^c)^c{^c}^c|^c ^c"]) };
+    expect(compile(emptyState)).toBe("P,P.P;P:P[P]P(P)P{P}P|P P");
+  });
+});
