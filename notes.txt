@@ -11,8 +11,10 @@ weight: (prompt:weight)
 
 
 TODO
-- deploy to github pages
-- randomPicker {a|b}
+- call variable in text with ^
+- variable prepend and append
+- "todo: this would be nice" in parsePrompt.test.js (improve commas detection for splitting)
+- randomPicker {a|b} where options can be active or not (nested dynamic input)
 - phrase radio picker
 - tooltip for phraseType in SectionPhrasesInput (eg, T is text, V is variable, etc.)
 - phraseType support for embeddings
@@ -21,11 +23,12 @@ TODO
 - macro variables and covariants
 - click drag sections
 - merge up button for phrase
-- github repo
 - typescript
 - migrate to Nuxt
 IN PROGRESS
 DONE
+- deploy to github pages
+- github repo
 - store config in localstorage
   - localstorage fetches config names
   - load model with dropdown to load a config by name

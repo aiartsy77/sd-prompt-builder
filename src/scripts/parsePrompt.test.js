@@ -80,4 +80,11 @@ describe("splitPhrases", () => {
       "(big, strong:1.3)",
     ]);
   });
+
+  // todo: this would be nice:
+  // test("should not split example", () => {
+  //   const phrase =
+  //     "(grey skirt, {short skirt, |miniskirt, |}{buttoned shirt, {white shirt, |}|white top}:1.3)";
+  //   expect(splitPhrases(phrase)).toEqual(phrase);
+  // });
 });
