@@ -1,0 +1,24 @@
+{
+  "name": "my-prompt-builder",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "ramda": "^0.30.1",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "naive-ui": "^2.38.2",
+    "vfonts": "^0.0.3",
+    "vite": "^5.2.0",
+    "vitest": "^1.6.0"
+  }
+}

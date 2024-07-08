@@ -1,0 +1,44 @@
+
+variable declarations
+
+sections
+  subsections
+    variable calls
+
+prompt parts
+randomPicker: {a|b}
+weight: (prompt:weight)
+
+
+TODO
+- deploy to github pages
+- randomPicker {a|b}
+- phrase radio picker
+- tooltip for phraseType in SectionPhrasesInput (eg, T is text, V is variable, etc.)
+- phraseType support for embeddings
+- phraseType support for Lora
+- try https://www.naiveui.com/en-US/os-theme/components/dynamic-tags instead of dynamic input
+- macro variables and covariants
+- click drag sections
+- merge up button for phrase
+- github repo
+- typescript
+- migrate to Nuxt
+IN PROGRESS
+DONE
+- store config in localstorage
+  - localstorage fetches config names
+  - load model with dropdown to load a config by name
+- easy copy prompt output to clipboard
+- prompt textarea should not have delete button
+- handle enter on variable dynamic input
+- finish variables, doublecheck, test
+- I need eveything the same for negative prompt
+- I need everything so far now for ADetailer
+- prompt parse regional support
+- prevent parse from breaking brackets
+- a prompt parser: prompt to state using sections based on BREAK
+- I need a checkbox to switch BREAK to regional prompt
+- checkboxes for each prompt phrase
+- I need sections that contain a list of strings that compiles to things with BREAK in between
+- I need a list of phrases that compiles to a string with commas
