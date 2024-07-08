@@ -20,7 +20,7 @@ const { phrases, auxSections, useRegionalPromter } = storeToRefs(store);
     <SectionPhrasesInput v-model="phrases" />
     <n-divider />
     <n-space v-for="section in auxSections" vertical>
-      <SectionPhrasesInput v-model:value="section.phrases" />
+      <SectionPhrasesInput v-model="section.phrases" />
       <n-divider />
     </n-space>
     <template #action>
