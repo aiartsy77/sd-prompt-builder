@@ -25,3 +25,11 @@ Built with Vue 3 in Vite. Check out the [script setup docs](https://v3.vuejs.org
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+
+## Deploy
+
+Deploy to github pages:
+
+```
+git subtree push --prefix dist origin gh-pages
+```
