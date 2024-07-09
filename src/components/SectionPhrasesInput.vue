@@ -11,8 +11,6 @@ const { activeVariables, postiveEmbeddings, negativeEmbeddings } = storeToRefs(s
 
 const embeddingOptions = isNegative ? negativeEmbeddings : postiveEmbeddings;
 
-console.log("model value here is:", model.value);
-
 const handleEnter = async (event, index, val) => {
   model.value.splice(index + 1, 0, newPhrase());
   event.target.blur();
@@ -40,18 +38,25 @@ const handleEnter = async (event, index, val) => {
     <template #default="{ value, index }">
       <div style="display: flex; align-items: center; width: 100%">
         <n-checkbox v-model:checked="value.active" style="margin-right: 12px" />
-        <n-radio-group
-          v-model:value="value.phraseType"
-          name="radiobuttongroup1"
-          style="margin-right: 12px"
-        >
-          <n-radio-button
-            v-for="phrasetype in phraseTypes"
-            :key="phrasetype"
-            :value="phrasetype"
-            :label="phrasetype"
-          />
-        </n-radio-group>
+        <n-tooltip trigger="hover">
+          <template #trigger>
+            <n-radio-group
+              v-model:value="value.phraseType"
+              name="radiobuttongroup1"
+              style="margin-right: 12px"
+              size="small"
+            >
+              <n-radio-button
+                v-for="phrasetype in phraseTypes"
+                :key="phrasetype"
+                :value="phrasetype"
+                :label="phrasetype"
+                style="padding-left: 8px; padding-right: 8px"
+              />
+            </n-radio-group>
+          </template>
+          Choose phrasetype: T for text, V for variable, E for embedding
+        </n-tooltip>
         <n-input
           v-if="value.phraseType == 'T'"
           v-model:value="value.textValue"
