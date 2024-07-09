@@ -18,38 +18,45 @@ const copyToClipboard = (event) => {
 
 <template>
   <n-card>
-    <n-h2>Prompt</n-h2>
+    <n-h2 style="margin: 0">Prompt</n-h2>
     <n-input
       class="prompt-output"
+      round
+      style="border: 1px solid green"
       type="textarea"
       :autosize="{ minRows: 10 }"
       :value="prompt"
-      round
       @click="copyToClipboard"
     />
-    <n-h2>Negative</n-h2>
+    <n-h2 style="margin: 0">Negative</n-h2>
     <n-input
       class="prompt-output"
+      round
+      status="error"
       type="textarea"
       :autosize="{ minRows: 5 }"
       :value="negative"
-      round
+      @click="copyToClipboard"
     />
-    <n-h2>ADetailer</n-h2>
+    <n-h2 style="margin: 0">ADetailer</n-h2>
     <n-input
       class="prompt-output"
+      round
+      style="border: 1px solid green"
       type="textarea"
       :autosize="{ minRows: 5 }"
       :value="aDetailer"
-      round
+      @click="copyToClipboard"
     />
-    <n-h2>ADetailer Negative</n-h2>
+    <n-h2 style="margin: 0">ADetailer Negative</n-h2>
     <n-input
       class="prompt-output"
+      round
       type="textarea"
       :autosize="{ minRows: 5 }"
       :value="aDetailerNegative"
-      round
+      @click="copyToClipboard"
+      status="error"
     />
   </n-card>
 </template>

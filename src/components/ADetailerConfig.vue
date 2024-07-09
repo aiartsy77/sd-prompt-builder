@@ -8,7 +8,7 @@ const { aDetailerPhrases } = storeToRefs(store);
 </script>
 
 <template>
-  <SectionPhrasesInput v-model:value="aDetailerPhrases" />
+  <SectionPhrasesInput v-model="aDetailerPhrases" />
 </template>
 
 <style scoped></style>

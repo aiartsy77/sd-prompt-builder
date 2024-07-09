@@ -8,7 +8,7 @@ const { aDetailerNegPhrases } = storeToRefs(store);
 </script>
 
 <template>
-  <SectionPhrasesInput v-model:value="aDetailerNegPhrases" />
+  <SectionPhrasesInput v-model="aDetailerNegPhrases" />
 </template>
 
 <style scoped></style>

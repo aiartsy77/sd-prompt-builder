@@ -11,6 +11,8 @@ const { activeVariables, postiveEmbeddings, negativeEmbeddings } = storeToRefs(s
 
 const embeddingOptions = isNegative ? negativeEmbeddings : postiveEmbeddings;
 
+console.log("model value here is:", model.value);
+
 const handleEnter = async (event, index, val) => {
   model.value.splice(index + 1, 0, newPhrase());
   event.target.blur();
