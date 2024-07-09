@@ -1,13 +1,15 @@
 <script setup>
-import { ref } from "vue";
 import { newPhrase } from "../scripts/newPhrase.js";
 import { storeToRefs } from "pinia";
 import { usePromptStore } from "../store.js";
 
 const model = defineModel();
+const { isNegative } = defineProps(["isNegative"]);
 const store = usePromptStore();
-const phraseTypes = ["T", "V"];
-const { activeVariables } = storeToRefs(store);
+const phraseTypes = ["T", "V", "E"];
+const { activeVariables, postiveEmbeddings, negativeEmbeddings } = storeToRefs(store);
+
+const embeddingOptions = isNegative ? negativeEmbeddings : postiveEmbeddings;
 
 const handleEnter = async (event, index, val) => {
   model.value.splice(index + 1, 0, newPhrase());
@@ -60,6 +62,13 @@ const handleEnter = async (event, index, val) => {
           :options="activeVariables"
           label-field="key"
           value-field="key"
+        />
+        <n-select
+          v-if="value.phraseType == 'E'"
+          v-model:value="value.embedding"
+          :options="embeddingOptions"
+          label-field="name"
+          value-field="name"
         />
       </div>
     </template>

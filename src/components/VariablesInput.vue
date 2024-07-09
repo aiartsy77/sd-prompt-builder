@@ -1,7 +1,7 @@
 <script setup>
+import { storeToRefs } from "pinia";
 import { newVariable } from "../scripts/newVariable.js";
 import { focusNextInput } from "../scripts/focusNextInput.js";
-import { storeToRefs } from "pinia";
 import { usePromptStore } from "../store.js";
 
 const store = usePromptStore();

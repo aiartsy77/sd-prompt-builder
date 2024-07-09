@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 import { compilePrompt, phrasesToPromptSection } from "./scripts/compilePrompt.js";
 import { newPhrase } from "./scripts/newPhrase.js";
 import { newVariable } from "./scripts/newVariable.js";
+import { newEmbedding } from "./scripts/newEmbedding.js";
 
 const newSection = () => ({
   phrases: [newPhrase()],
@@ -15,6 +16,7 @@ export const initialState = () => ({
   aDetailerPhrases: [newPhrase()],
   aDetailerNegPhrases: [newPhrase()],
   variables: [newVariable()],
+  embeddings: [newEmbedding()],
 });
 
 export const usePromptStore = defineStore("counter", {
@@ -33,6 +35,8 @@ export const usePromptStore = defineStore("counter", {
       return phrasesToPromptSection(this.activeVariables)(state.aDetailerNegPhrases);
     },
     activeVariables: (state) => state.variables.filter((v) => !!v.key && !!v.value),
+    postiveEmbeddings: (state) => state.embeddings.filter((e) => !!e.name && !e.isNegative),
+    negativeEmbeddings: (state) => state.embeddings.filter((e) => !!e.name && e.isNegative),
   },
   actions: {
     addSection() {

@@ -10,6 +10,7 @@ import NegPhrasesConfig from "./components/NegPhrasesConfig.vue";
 import ADetailerConfig from "./components/ADetailerConfig.vue";
 import ADetailerNegativeConfig from "./components/ADetailerNegativeConfig.vue";
 import VariablesInput from "./components/VariablesInput.vue";
+import EmbeddingsTab from "./components/EmbeddingsTab.vue";
 import PromptsOutput from "./components/PromptsOutput.vue";
 
 const store = usePromptStore();
@@ -51,6 +52,9 @@ function loadState() {
           </n-tab-pane>
           <n-tab-pane name="variables" tab="Variables">
             <VariablesInput />
+          </n-tab-pane>
+          <n-tab-pane name="embeddings" tab="Embeddings">
+            <EmbeddingsTab />
           </n-tab-pane>
         </n-tabs>
       </n-card>

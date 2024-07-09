@@ -11,13 +11,14 @@ weight: (prompt:weight)
 
 
 TODO
+- variable support for embeddings
+- toggle active for entire section, disable all inputs under section if inactive
 - variable prepend and append
 - validation: variable key must be only letters and numbers, no spaces or special characters
 - randomPicker {a|b} where options can be active or not (nested dynamic input)
 - "todo: this would be nice" in parsePrompt.test.js (improve commas detection for splitting)
 - phrase radio picker
 - tooltip for phraseType in SectionPhrasesInput (eg, T is text, V is variable, etc.)
-- phraseType support for embeddings
 - phraseType support for Lora
 - try https://www.naiveui.com/en-US/os-theme/components/dynamic-tags instead of dynamic input
 - macro variables and covariants
@@ -27,6 +28,7 @@ TODO
 - migrate to Nuxt
 IN PROGRESS
 DONE
+- phraseType support for embeddings
 - call variable in text with ^
 - deploy to github pages
 - github repo
