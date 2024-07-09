@@ -2,4 +2,5 @@
 export const newVariable = (key = "") => ({
   key,
   value: "",
+  variableType: "T", // T for text, E for embedding
 });

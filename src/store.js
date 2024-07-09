@@ -35,6 +35,7 @@ export const usePromptStore = defineStore("counter", {
       return phrasesToPromptSection(this.activeVariables)(state.aDetailerNegPhrases);
     },
     activeVariables: (state) => state.variables.filter((v) => !!v.key && !!v.value),
+    activeEmbeddings: (state) => state.embeddings.filter((e) => !!e.name),
     postiveEmbeddings: (state) => state.embeddings.filter((e) => !!e.name && !e.isNegative),
     negativeEmbeddings: (state) => state.embeddings.filter((e) => !!e.name && e.isNegative),
   },
